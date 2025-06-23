@@ -5,7 +5,7 @@ import { ref } from 'vue'
 const currencies = [
     { code: 'EUR', name: 'Euro' },
     { code: 'USD', name: 'US Dollar' },
-    { code: 'GBP', name: 'British Pound' },
+    { code: 'SKK', name: 'Slovak Koruna' },
     { code: 'CZK', name: 'Czech Koruna' },
     { code: 'PLN', name: 'Polish Zloty' }
 ]
