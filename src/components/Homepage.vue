@@ -81,27 +81,3 @@ fetchRates()
     </div>
   </main>
 </template>
-
-<style scoped>
-main {
-  max-width: 400px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px #0001;
-}
-label {
-  margin-right: 1rem;
-}
-input {
-  width: 80px;
-  margin: 0 1rem;
-}
-button {
-  margin: 0 1rem;
-  padding: 0.3rem 0.7rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-</style>
