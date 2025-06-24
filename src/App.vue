@@ -8,8 +8,8 @@ import { VApp, VAppBar, VToolbarTitle, VSpacer, VBtn, VMain } from 'vuetify/comp
         <VAppBar app color="primary" dark>
             <VToolbarTitle>Konvertor mien</VToolbarTitle>
             <VSpacer />
-            <VBtn variant="text" to="/" tag="RouterLink">Home</VBtn>
-            <VBtn variant="text" to="/about" tag="RouterLink">About</VBtn>
+            <VBtn variant="text" to="/" tag="RouterLink">Domov</VBtn>
+            <VBtn variant="text" to="/about" tag="RouterLink">O mne</VBtn>
         </VAppBar>
         <VMain>
             <RouterView />

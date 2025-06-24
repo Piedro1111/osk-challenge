@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { VSelect, VTextField, VBtn } from 'vuetify/components'
+import { VSelect, VTextField, VBtn, VCard, VCardTitle, VCardText } from 'vuetify/components'
 
 const currencies = [
     { code: 'EUR', name: 'Euro' },
@@ -59,7 +59,7 @@ fetchRates()
 
 <template>
     <main>
-        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <div class="main-container">
             <VSelect
                 v-model="from"
                 :items="currencies"
@@ -79,7 +79,7 @@ fetchRates()
                 :disabled="loading"
                 style="max-width: 120px;"
             />
-            <VBtn icon rounded="false" @click="swap" :disabled="loading">
+            <VBtn icon rounded="0" @click="swap" :disabled="loading" style="height: 56px; margin-top: -20px;">
                 <span>⇄</span>
             </VBtn>
             <VSelect
@@ -93,10 +93,37 @@ fetchRates()
                 style="min-width: 200px;"
             />
         </div>
-        <div v-if="loading" style="margin-top: 1rem;">Načítavam kurzy...</div>
-        <div v-if="error" style="color:red; margin-top: 1rem;">{{ error }}</div>
-        <div v-if="result && !loading && !error" style="margin-top: 1rem;">
-            <strong>Výsledok:</strong> {{ amount }} {{ from }} = {{ result }} {{ to }}
+        <div v-if="loading" class="loading-text">Načítavam kurzy...</div>
+        <div v-if="error" class="error-text">{{ error }}</div>
+        <div v-if="result && !loading && !error">
+            <VCard outlined color="success" class="result-card">
+                <VCardTitle>
+                    Výsledok
+                </VCardTitle>
+                <VCardText>
+                    {{ amount }} {{ from }} = {{ result }} {{ to }}
+                </VCardText>
+            </VCard>
         </div>
     </main>
 </template>
+
+<style scoped>
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+.loading-text {
+    margin-top: 1rem;
+}
+.error-text {
+    color: red;
+    margin-top: 1rem;
+}
+.result-card {
+    padding: 1rem;
+}
+</style>
