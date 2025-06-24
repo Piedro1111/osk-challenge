@@ -17,6 +17,34 @@ Cieľom je vytvoriť jednoduchú **JS client-side aplikáciu na konverziu mien**
 
 # Installation and run in Docker
 
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+### Running Unit Tests
+
+To run the unit tests, use the command:
+
+```sh
+npm run test:unit
+```
+
+The tests are implemented using [Vitest](https://vitest.dev/). Results will be displayed in the terminal.
+
 ## For Linux
 
 1. Build the Docker image:
@@ -68,31 +96,3 @@ TypeScript cannot handle type information for `.vue` imports by default, so we r
 ## Customize configuration
 
 See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Running Unit Tests
-
-To run the unit tests, use the command:
-
-```sh
-npm run test:unit
-```
-
-The tests are implemented using [Vitest](https://vitest.dev/). Results will be displayed in the terminal.
