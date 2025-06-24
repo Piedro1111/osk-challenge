@@ -59,6 +59,14 @@ fetchRates()
 
 <template>
     <main>
+        <VCard outlined class="mb-4">
+            <VCardTitle>
+                Konvertor mien
+            </VCardTitle>
+            <VCardText>
+                Vyberte východziu a cieľovú menu a zadajte sumu.
+            </VCardText>
+        </VCard>
         <div class="main-container">
             <VSelect
                 v-model="from"
