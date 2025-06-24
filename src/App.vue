@@ -1,20 +1,20 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import { VApp, VAppBar, VToolbarTitle, VSpacer, VBtn, VMain } from 'vuetify/components'
 </script>
 
 <template>
-    <header>
-        <h1>Konvertor mien</h1>
-
-        <div class="wrapper">
-            <nav>
-                <RouterLink to="/">Home</RouterLink>
-                <RouterLink to="/about">About</RouterLink>
-            </nav>
-        </div>
-    </header>
-
-    <RouterView />
+    <VApp>
+        <VAppBar app color="primary" dark>
+            <VToolbarTitle>Konvertor mien</VToolbarTitle>
+            <VSpacer />
+            <VBtn variant="text" to="/" tag="RouterLink">Home</VBtn>
+            <VBtn variant="text" to="/about" tag="RouterLink">About</VBtn>
+        </VAppBar>
+        <VMain>
+            <RouterView />
+        </VMain>
+    </VApp>
 </template>
 
 <style scoped></style>
