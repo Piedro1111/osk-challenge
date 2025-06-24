@@ -87,8 +87,12 @@ npm run dev
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Running Unit Tests
+
+To run the unit tests, use the command:
 
 ```sh
 npm run test:unit
 ```
+
+The tests are implemented using [Vitest](https://vitest.dev/). Results will be displayed in the terminal.
